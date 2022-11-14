@@ -1,0 +1,20 @@
+
+
+
+spring:
+  application:
+    name: bookstore-ui-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka
+server:
+  port: 0
+
+api:
+  url: http://localhost:8080/
+payment:
+  url: http://localhost:8080/
+transport:
+  url: http://localhost:8080/

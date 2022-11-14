@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: payment-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/payment
+    password: kyaw
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka
+server:
+  port: 0

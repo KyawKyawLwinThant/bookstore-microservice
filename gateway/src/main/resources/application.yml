@@ -1,0 +1,32 @@
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: bookstore-backend
+          uri: lb://BOOKSTORE-BACKEND-SERVICE
+          predicates:
+            - Path=/api/**
+
+        - id: payment
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**
+
+        - id: transportation-app
+          uri: lb://TRANSPORT-SERVICE
+          predicates:
+            - Path=/transport/**
+
+        - id: bookstore-ui
+          uri: lb://BOOKSTORE-UI-SERVICE
+          predicates:
+            - Path=/bookstore/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka
+server:
+  port: 8080

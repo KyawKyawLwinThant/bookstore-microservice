@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/masterLayout :: layout(~{::main})}" lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div class="container p-4 mt-4">
+        <div th:if="${success}">
+            <p class="alert alert-success" role="alert">All Items successfully Transported.</p>
+        </div>
+        <div th:replace="~{fragments/allbooks.html :: booksCard}"></div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="bookDetail" class="row">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <img th:src="${book.imageUrl}" class="card-img"  alt="">
+    </div>
+
+  </div>
+  <div class="col-md-6">
+      <div class="container px-3">
+        <h3 class="text-muted" th:text="${book.title}"></h3>
+        <p th:text="'This book written by - ' + ${book.authorName}"></p>
+        <p th:text="'The book published by - '+ ${book.publisher}"></p>
+        <p th:text="'Published at -' + ${book.yearPublished}"></p>
+        <p th:text="'Its costs ' + ${book.price} + '$'"></p>
+        <p class="lead">, quidem rerum? Aliquam architecto, aspernatur dolorem, doloremque, fugit impedit laudantium molestias nobis officia possimus quasi reiciendis!</span></p>
+      </div>
+  </div>
+</div>
+</body>
+</html>
